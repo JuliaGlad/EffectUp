@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Material3.BodyLarge.Bold.EffectUp" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodyLarge.Medium.EffectUp" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/md_theme_surfaceContainerLow</item>
+        <item name="colorAccent">@color/md_theme_surfaceContainerLow</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodyLarge.Regular.EffectUp" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodyMedium.Bold.EffectUp" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodyMedium.Medium.EffectUp" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodyMedium.Regular.EffectUp" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.Bold.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.Medium.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.Regular.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.HintColor.Regular.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorHint</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.HintColor.Medium.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorHint</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.ExtraSmall.Bold.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.ExtraSmall.Medium.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.ExtraSmall.Regular.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.ExtraSmall.Hint.Medium.EffectUp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/md_theme_hint_color</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleLarge.Bold.EffectUp" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleLarge.Medium.EffectUp" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleMedium.Bold.EffectUp" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleMedium.Medium.EffectUp" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleSmall.Bold.EffectUp" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleSmall.Hint.Bold.EffectUp" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/md_theme_hint_color</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleSmall.Medium.EffectUp" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleSmall.Regular.EffectUp" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox.EffectUp" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">100dp</item>
+        <item name="boxCornerRadiusBottomStart">100dp</item>
+        <item name="boxCornerRadiusTopEnd">100dp</item>
+        <item name="boxCornerRadiusTopStart">100dp</item>
+        <item name="boxStrokeColor">@drawable/text_input_stroke_color</item>
+        <item name="boxBackgroundColor">@color/md_theme_surfaceContainer</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+    </style>
+
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox.PhoneNumber.EffectUp" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxStrokeColor">@drawable/text_input_stroke_color</item>
+        <item name="boxBackgroundColor">@color/md_theme_surfaceContainer</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+    </style>
+
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox.Square.EffectUp" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxStrokeColor">@drawable/text_input_stroke_color</item>
+        <item name="boxBackgroundColor">@color/md_theme_surfaceContainer</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+    </style>
+
+    <style name="Widget.Material3.Button.EffectUp" parent="Widget.Material3.Button">
+        <item name="fontFamily">@font/bold_roboto</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:backgroundTint">@color/md_theme_button_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.Material3.Button.Tonal.EffectUp" parent="Widget.Material3.Button.TonalButton">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="backgroundTint">?colorSurface</item>
+        <item name="android:textColor">@color/md_theme_button_color</item>
+    </style>
+
+    <style name="TextAppearance.Material3.TitleSmall.Red.EffectUp" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorOnErrorContainer</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="Widget.Material3.Button.TextButton.Red.Dialog.EffectUp" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorOnErrorContainerVariant</item>
+    </style>
+
+    <style name="Widget.Material3.Button.TonalButton.Red.EffectUp" parent="Widget.Material3.Button.TonalButton">
+        <item name="backgroundTint">@color/colorOnErrorTonal</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorOnErrorContainer</item>
+    </style>
+
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox.Dialog.Tonal.Red.EffectUp" parent="">
+        <item name="cursorColor">@color/colorOnErrorContainerDialog</item>
+        <item name="boxStrokeColor">@color/text_input_layout_stroke_red</item>
+        <item name="boxBackgroundColor">@color/colorOnErrorTonal</item>
+        <item name="boxCornerRadiusBottomEnd">100dp</item>
+        <item name="boxCornerRadiusBottomStart">100dp</item>
+        <item name="boxCornerRadiusTopEnd">100dp</item>
+        <item name="boxCornerRadiusTopStart">100dp</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodyMedium.Red.Dialog.EffectUp" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorOnErrorContainerVariant</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Widget.Material3.Button.TonalButton.EffectUp" parent="Widget.Material3.Button.TonalButton">
+        <item name="backgroundTint">@color/colorTonal</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="Widget.Material3.Button.TextButton.Dialog.EffectUp" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorHint</item>
+    </style>
+
+
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox.Dialog.Tonal.EffectUp" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">100dp</item>
+        <item name="boxCornerRadiusBottomStart">100dp</item>
+        <item name="boxCornerRadiusTopEnd">100dp</item>
+        <item name="boxCornerRadiusTopStart">100dp</item>
+        <item name="boxStrokeColor">@color/text_input_layout_stroke</item>
+        <item name="boxBackgroundColor">@color/colorTonal</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+    </style>
+
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox.Dialog.EffectUp" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusBottomEnd">100dp</item>
+        <item name="boxCornerRadiusBottomStart">100dp</item>
+        <item name="boxCornerRadiusTopEnd">100dp</item>
+        <item name="boxCornerRadiusTopStart">100dp</item>
+        <item name="boxStrokeColor">@color/text_input_layout_stroke_red</item>
+        <item name="boxBackgroundColor">@color/colorOnErrorTonal</item>
+    </style>
+
+    <style name="NumberPickerTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColorPrimary">@color/md_theme_primary</item>
+        <item name="android:background">@drawable/number_picker_background</item>
+    </style>
+
+</resources>

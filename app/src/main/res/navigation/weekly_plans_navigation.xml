@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/monthly_plans_navigation.xml"
+    app:startDestination="@id/monthlyPlanCalendarFragment">
+
+    <fragment
+        android:id="@+id/monthlyPlanCalendarFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.weekly.calendar.WeeklyPlanCalendarFragment"
+        android:label="fragment_monthly_plan_calendar"
+        tools:layout="@layout/fragment_monthly_plan_calendar" >
+        <action
+            android:id="@+id/action_monthlyPlanCalendarFragment_to_daysOfWeekFragment"
+            app:destination="@id/daysOfWeekFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daysOfWeekFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.weekly.weeklyPlansDetails.daysOfWeek.DaysOfWeekFragment"
+        android:label="fragment_days_of_week"
+        tools:layout="@layout/fragment_days_of_week" >
+        <action
+            android:id="@+id/action_daysOfWeekFragment_to_monthlyPlanCalendarFragment"
+            app:destination="@id/monthlyPlanCalendarFragment" />
+        <action
+            android:id="@+id/action_daysOfWeekFragment_to_weeklyTaskDetailsFragment"
+            app:destination="@id/weeklyTaskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weeklyTaskDetailsFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.weekly.weeklyPlansDetails.taskDetails.WeeklyTaskDetailsFragment"
+        android:label="fragment_weekly_task_details"
+        tools:layout="@layout/fragment_weekly_task_details" />
+</navigation>

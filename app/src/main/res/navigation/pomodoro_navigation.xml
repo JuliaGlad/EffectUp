@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pomodoro_navigation.xml"
+    app:startDestination="@id/chooseTimeFragment">
+
+    <fragment
+        android:id="@+id/chooseTimeFragment"
+        android:name="myapplication.android.mindall.presentation.plans.pomodoro.chooseTime.ChooseTimeFragment"
+        android:label="ChooseTimeFragment" >
+        <action
+            android:id="@+id/action_chooseTimeFragment_to_pomodoroTimerFragment"
+            app:destination="@id/pomodoroTimerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pomodoroTimerFragment"
+        android:name="myapplication.android.mindall.presentation.plans.pomodoro.pomodoroTimer.PomodoroTimerFragment"
+        android:label="fragment_pomodoro_timer"
+        tools:layout="@layout/fragment_pomodoro_timer" >
+        <action
+            android:id="@+id/action_pomodoroTimerFragment_to_chooseTimeFragment"
+            app:destination="@id/chooseTimeFragment" />
+        <action
+            android:id="@+id/action_pomodoroTimerFragment_to_pomodoroFinishedFragment"
+            app:destination="@id/pomodoroFinishedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pomodoroFinishedFragment"
+        android:name="myapplication.android.mindall.presentation.plans.pomodoro.pomodoroFinished.PomodoroFinishedFragment"
+        android:label="fragment_pomodoro_finished"
+        tools:layout="@layout/fragment_pomodoro_finished" >
+        <action
+            android:id="@+id/action_pomodoroFinishedFragment_to_chooseTimeFragment"
+            app:destination="@id/chooseTimeFragment" />
+    </fragment>
+</navigation>

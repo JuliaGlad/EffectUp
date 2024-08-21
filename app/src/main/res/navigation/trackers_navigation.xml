@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trackers_navigation"
+    app:startDestination="@id/trackersFragment">
+
+    <fragment
+        android:id="@+id/trackersFragment"
+        android:name="myapplication.android.mindall.presentation.plans.trackers.TrackersFragment"
+        android:label="fragment_trackers"
+        tools:layout="@layout/fragment_trackers" >
+        <action
+            android:id="@+id/action_trackersFragment_to_habitTrackersFragment"
+            app:destination="@id/habitTrackersFragment" />
+        <action
+            android:id="@+id/action_trackersFragment_to_moodTrackersFragment"
+            app:destination="@id/moodTrackersFragment" />
+        <action
+            android:id="@+id/action_trackersFragment_to_nightFragment"
+            app:destination="@id/nightFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitTrackersFragment"
+        android:name="myapplication.android.mindall.presentation.plans.trackers.habiitTrackers.HabitTrackersFragment"
+        android:label="fragment_habit_trackers"
+        tools:layout="@layout/fragment_habit_trackers" />
+    <fragment
+        android:id="@+id/moodTrackersFragment"
+        android:name="myapplication.android.mindall.presentation.plans.trackers.moodTrackers.MoodTrackersFragment"
+        android:label="fragment_mood_trackers"
+        tools:layout="@layout/fragment_mood_trackers" />
+    <fragment
+        android:id="@+id/nightFragment"
+        android:name="myapplication.android.mindall.presentation.plans.trackers.nightTrackers.NightFragment"
+        android:label="fragment_night"
+        tools:layout="@layout/fragment_night" />
+</navigation>

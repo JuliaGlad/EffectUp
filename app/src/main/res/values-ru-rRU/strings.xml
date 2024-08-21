@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false" >EffectUp</string>
+    <string name="home">Главная</string>
+    <string name="plans">Планы</string>
+    <string name="profile">Профиль</string>
+    <string name="edit_profile">Редактировать</string>
+    <string name="settings">Настройки</string>
+    <string name="appearance">Внешний вид</string>
+    <string name="login_and_start_planning">Входите и планируйте!</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="password">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="name">Имя</string>
+    <string name="don_t_have_an_account_yet">Все еще нет аккаунта?</string>
+    <string name="create">Создайте!</string>
+    <string name="create_account">Создайте аккаунт!</string>
+    <string name="confirm_your_phone_number">Подтвердите номер телефона</string>
+    <string name="we_have_sent_a_verification_code_to_this_number">На ваш номер телефона был отправлен код для верификации</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="don_t_have_a_code">Не пришел код?</string>
+    <string name="save">Сохранить</string>
+    <string name="status">Статус</string>
+    <string name="create_btn">Создать</string>
+    <string name="this_field_is_required">Это поле необходимо</string>
+    <string name="phone_number_is_incorrect">Номер телефона недействителен</string>
+    <string name="email">Почта</string>
+    <string name="change_password">Сменить пароль</string>
+    <string name="update_email">Обновить почту</string>
+    <string name="delete_account">Удалить аккаунт</string>
+    <string name="logout">Выйти</string>
+    <string name="are_you_sure">Вы уверены?</string>
+    <string name="are_you_sure_you_want_to_delete_this_account">Вы уверены, что хотите удалить аккаунт?</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отменить</string>
+    <string name="are_you_sure_you_want_to_log_out">Вы уверены, что хотите выйти из аккаунта?</string>
+    <string name="done">Сделано</string>
+    <string name="new_email">Новая почта</string>
+    <string name="change_email">Обновить почту</string>
+    <string name="update_password">Сменить пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="old_password">Старый пароль</string>
+    <string name="update">Сменить</string>
+    <string name="success">Успешно!</string>
+    <string name="update_was_successful">Обновление прошло успешно!</string>
+    <string name="ok">oк</string>
+    <string name="we_send_a_verification_link_to">Мы отправили ссылку на</string>
+    <string name="verify_your_email">Подтвердите свою почту</string>
+    <string name="trakers">Трекеры</string>
+    <string name="pomodoro_timer">Pomodoro-Таймер</string>
+    <string name="other">Другое</string>
+    <string name="create_plans_for_your_cases_and_goals_for_the_next_days_weeks_month_or_years">Планируйте свои дела и цели на день, неделю, месяц или год</string>
+    <string name="track_your_progress_improve_and_go_towards_your_goal">Отслеживайте свой прогресс, улучшайтесь и идите к своей цели</string>
+    <string name="work_and_learn_using_the_pomodoro_technique">Работайте и учитесь, используя технику помодоро</string>
+    <string name="use_other_planners_for_specific_purposes">Используйте иные планнеры для конкретных целей</string>
+    <string name="daily">День</string>
+    <string name="weekly">Неделя</string>
+    <string name="monthly">Месяц</string>
+    <string name="yearly">Год</string>
+    <string name="plan_your_day_with_effectup">Планируйте свой день с EffectUp</string>
+    <string name="set_goals_for_the_week_and_mark_the_tasks">Ставьте цели на неделю и отмечайте задачи</string>
+    <string name="set_goals_for_the_month_and_structure_your_tasks_and_plans">Ставьте цели на месяц и структурируйте свои задачи и планы</string>
+    <string name="mark_your_annual_goals_important_data_and_other_notes">Отмечайте свои годовые цели, важные данные и иные заметки</string>
+    <string name="tasks">Планы на этот день:</string>
+    <string name="view_details">Смотреть детали</string>
+    <string name="task">Задача(-и)</string>
+    <string name="you_don_t_have_any_task_on_this_day">У вас нет никаких планов на этот день</string>
+    <string name="add_tasks">Добавить задачи</string>
+    <string name="my_daily_plans">Мои планы на день</string>
+    <string name="plans_for">Планы на</string>
+    <string name="daily_task">Задачи:</string>
+    <string name="day_schedule">График дня:</string>
+    <string name="line">-</string>
+    <string name="add_daily_task">Добавить задание</string>
+    <string name="add">Добавить</string>
+    <string name="what_you_need_to_do">Что нужно сделать?</string>
+    <string name="urgent">Срочно</string>
+    <string name="not_very_urgent">Не сильно срочное</string>
+    <string name="not_urgent">Не срочное</string>
+    <string name="title">Название</string>
+    <string name="ending">Окончание</string>
+    <string name="start">Начало</string>
+    <string name="notify_me_of_the_start">Уведомить меня о начале</string>
+    <string name="choose_week">Выберите неделю</string>
+    <string name="you_dont_have_any_plans">У вас нет планов на эту неделю</string>
+    <string name="you_already_have_plans_for">У вас уже есть планы на неделю  </string>
+    <string name="choose_month">Выберите месяц</string>
+    <string name="choose_year">Выберите год</string>
+    <string name="goals_for_the_month">Цели на месяц:</string>
+    <string name="add_goal">Добавить цель</string>
+    <string name="goals_for_the_year">Цели на год:</string>
+    <string name="important_dates">Важные даты:</string>
+    <string name="add_date">Добавить дату</string>
+    <string name="event">Событие</string>
+    <string name="what_is">Что такое</string>
+    <string name="pomodoro">Помодоро</string>
+    <string name="pomodoro_description">Принцип включает в себя деление рабочего времени на активные периоды и время отдыха. \nНапример, ставится таймер на 25 минут работы и 5 минут отдыха. \nЭти отрезки времени называют помидорами в честь кухонного таймера в виде помидора.</string>
+    <string name="your_time">Ваше время</string>
+    <string name="stop">Остановить</string>
+    <string name="pomodoro_started_desc_first">Помодоро таймер будет повторятся 4 раза: у вас будет по</string>
+    <string name="pomodoro_desc_second">на работу и по</string>
+    <string name="pomodoro_desc_third">на отдых</string>
+    <string name="time_to_work">Пора поработать!</string>
+    <string name="time_to_rest">Самое время отдохнуть!</string>
+    <string name="your_pomodoro_timer_successfully_finished">Твой помодоро таймер закончился!</string>
+    <string name="great_translatable">Отлично!</string>
+    <string name="come_back_any_time">Возвращайтесь снова в любое время!</string>
+    <string name="pomodoro_timer_will_repeat_4_times">Помодоро таймер повторится 4 раза</string>
+    <string name="hours">Часы</string>
+    <string name="minutes">Минуты</string>
+    <string name="seconds">Секунды</string>
+    <string name="choose_time_rest">Выбор времени отдыха</string>
+    <string name="choose_work_time">Выбор времени работы</string>
+    <string name="pause">Остановить</string>
+    <string name="tracker">Трекеры</string>
+    <string name="statistics">Статистика</string>
+    <string name="sleep">Сон</string>
+    <string name="mood">Настроение</string>
+    <string name="habits">Привычки</string>
+    <string name="sleep_tracker_desc">Поможет вам отследить вашу динамику сна за месяц </string>
+    <string name="mood_tracker_desc">поможет записывать свои эмоции  по окончании дня</string>
+    <string name="habits_tracker_desc">Поможет вам заниматься занятиями и получать результат</string>
+    <string name="sleep_trackers">Трекер сна</string>
+    <string name="track_the_quality_of_your_sleep">Отслеживайте качество своего сна</string>
+
+    <string-array name="week_days">
+        <item>Пн.</item>
+        <item>Вт.</item>
+        <item>Ср.</item>
+        <item>Чт.</item>
+        <item>Пт.</item>
+        <item>Сб.</item>
+        <item>Вс.</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+</resources>

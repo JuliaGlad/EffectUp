@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/daily_plans_navigation.xml"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.daily.calendar.CalendarFragment"
+        android:label="CalendarFragment" >
+        <action
+            android:id="@+id/action_calendarFragment_to_dailyPlanDetailsFragment"
+            app:destination="@id/dailyPlanDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyPlanDetailsFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.daily.dailyPlanDetails.DailyPlanDetailsFragment"
+        android:label="DailyPlanDetailsFragment" >
+        <action
+            android:id="@+id/action_dailyPlanDetailsFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+</navigation>

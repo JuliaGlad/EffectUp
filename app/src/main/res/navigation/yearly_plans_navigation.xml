@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/yearly_plans_navigation.xml"
+    app:startDestination="@id/chooseYearFragment">
+
+    <fragment
+        android:id="@+id/chooseYearFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.yearly.chooseYear.ChooseYearFragment"
+        android:label="ChooseYearFragment" >
+        <action
+            android:id="@+id/action_chooseYearFragment_to_yearlyGoalsDetailsFragment"
+            app:destination="@id/yearlyGoalsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yearlyGoalsDetailsFragment"
+        android:name="myapplication.android.mindall.presentation.plans.basicPlans.yearly.yearPlanDetails.YearlyGoalsDetailsFragment"
+        android:label="YearlyGoalsDetailsFragment" />
+</navigation>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "782631427121",
+    "project_id": "mindall-33d86",
+    "storage_bucket": "mindall-33d86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782631427121:android:a200721b9ea50852878910",
+        "android_client_info": {
+          "package_name": "myapplication.android.mindall"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiRNBQH6OhIMNHcaaeeKc_CQVRX9RPAls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
