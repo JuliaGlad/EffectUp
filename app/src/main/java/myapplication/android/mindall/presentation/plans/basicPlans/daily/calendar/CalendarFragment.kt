@@ -47,7 +47,14 @@ class CalendarFragment : Fragment() {
         setAdapter()
         setupObserves()
         initCalendar()
+        initBackButton()
         initDetailsButton()
+    }
+
+    private fun initBackButton() {
+        binding.buttonBack.setOnClickListener {
+            activity?.finish()
+        }
     }
 
     private fun initDetailsButton() {

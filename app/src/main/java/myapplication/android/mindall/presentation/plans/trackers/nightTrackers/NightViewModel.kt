@@ -10,7 +10,7 @@ import myapplication.android.mindall.common.Constants.Companion.NO_PLANS
 import myapplication.android.mindall.common.State
 import myapplication.android.mindall.di.trackers.NightTrackersDI
 import myapplication.android.mindall.domain.model.trackers.TrackerModel
-import myapplication.android.mindall.presentation.plans.trackers.nightTrackers.model.TrackersPresModel
+import myapplication.android.mindall.presentation.plans.trackers.model.TrackersPresModel
 
 class NightViewModel : ViewModel() {
 

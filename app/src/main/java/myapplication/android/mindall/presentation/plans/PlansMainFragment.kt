@@ -66,16 +66,6 @@ class PlansMainFragment : Fragment() {
                     override fun onClick() {
                         (activity as MainActivity).openPomodoroActivity()
                     }
-                }),
-            ButtonWithIconAndTextModel(
-                4,
-                getString(R.string.other),
-                getString(R.string.use_other_planners_for_specific_purposes),
-                R.drawable.ic_other_plans,
-                object : ButtonClickListener {
-                    override fun onClick() {
-
-                    }
                 })
         )
         val adapter = ButtonWithIconAndTextAdapter()

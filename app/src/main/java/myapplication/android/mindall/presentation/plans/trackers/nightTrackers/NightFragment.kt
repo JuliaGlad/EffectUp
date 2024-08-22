@@ -8,7 +8,10 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.NavHostFragment
 import myapplication.android.mindall.R
+import myapplication.android.mindall.common.Constants.Companion.NIGHT_TRACKER
+import myapplication.android.mindall.common.Constants.Companion.VALUE
 import myapplication.android.mindall.common.Status
 import myapplication.android.mindall.common.delegate.DelegateItem
 import myapplication.android.mindall.common.delegate.MainAdapter
@@ -17,28 +20,56 @@ import myapplication.android.mindall.common.delegateItems.adviseBox.AdviseBoxDel
 import myapplication.android.mindall.common.delegateItems.adviseBox.AdviseBoxModel
 import myapplication.android.mindall.common.delegateItems.floatingActionButton.FabDelegate
 import myapplication.android.mindall.common.delegateItems.floatingActionButton.FabDelegateItem
+import myapplication.android.mindall.common.delegateItems.floatingActionButton.FabModel
 import myapplication.android.mindall.common.delegateItems.tracker.TrackerDelegate
 import myapplication.android.mindall.common.delegateItems.tracker.TrackerDelegateItem
 import myapplication.android.mindall.common.delegateItems.tracker.TrackerModel
 import myapplication.android.mindall.common.listeners.ButtonClickListener
+import myapplication.android.mindall.common.listeners.DialogDismissedListener
 import myapplication.android.mindall.databinding.FragmentNightBinding
-import myapplication.android.mindall.presentation.plans.trackers.nightTrackers.model.TrackersPresModel
+import myapplication.android.mindall.presentation.dialog.addTracker.AddTrackerDialogFragment
+import myapplication.android.mindall.presentation.dialog.alreadyHaveTrackerDialog.AlreadyHaveTrackerDialogFragment
+import myapplication.android.mindall.presentation.plans.trackers.model.TrackersPresModel
+import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Locale
 import java.util.Random
 
 class NightFragment : Fragment() {
+
     private lateinit var binding: FragmentNightBinding
     private val viewModel: NightViewModel by viewModels()
+    private var isNew = false
     private var yearId: String? = null
     private lateinit var year: String
     private val mainAdapter = MainAdapter()
+    private lateinit var date: String
+    private var isCurrentTrackerAdded = false
     private val trackers = mutableListOf<DelegateItem>()
     private var monthId: String? = null
+    private lateinit var month: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         year = getCurrentYear().toString()
+        date = getCurrentDate()
+        month = getCurrentMonth()
         viewModel.getYearId(year)
+    }
+
+    private fun getCurrentMonth(): String {
+        val calendar = Calendar.getInstance()
+        val monthNumber = calendar.get(Calendar.MONTH)
+
+        return getMonthByNumber(monthNumber)
+    }
+
+    private fun getMonthByNumber(monthNumber: Int) = resources.getStringArray(R.array.month)[monthNumber]
+
+
+    private fun getCurrentDate(): String {
+        val date = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(Calendar.getInstance().time)
+        return date.toString()
     }
 
     override fun onCreateView(
@@ -53,6 +84,13 @@ class NightFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
         setupObserves()
+        initBackButton()
+    }
+
+    private fun initBackButton() {
+        binding.buttonBack.setOnClickListener {
+            NavHostFragment.findNavController(this).popBackStack()
+        }
     }
 
     private fun initAdapter() {
@@ -74,7 +112,7 @@ class NightFragment : Fragment() {
             when (it.status) {
                 Status.SUCCESS -> {
                     binding.titleYear.text = year
-                    binding.titleMonth.text = Calendar.getInstance().get(Calendar.YEAR).toString()
+                    binding.titleMonth.text = month
                     initRecycler(it.data)
                     binding.loading.loadingLayout.visibility = GONE
                 }
@@ -87,22 +125,29 @@ class NightFragment : Fragment() {
         viewModel.yearId.observe(viewLifecycleOwner) {
             if (it != null) {
                 yearId = it
+                viewModel.getMonthId(yearId.toString(), month)
             }
         }
 
         viewModel.monthId.observe(viewLifecycleOwner) {
             if (it != null) {
+                monthId = it
                 viewModel.getMonthTrackers(yearId.toString(), monthId.toString())
             }
         }
 
         viewModel.isNew.observe(viewLifecycleOwner) {
-            if (yearId == null) {
-                yearId = generateId()
-                monthId = generateId()
-            } else {
-                monthId = generateId()
-                viewModel.setSuccessStateWithEmptyList()
+            if (it == true) {
+                if (yearId == null) {
+                    isNew = true
+                    yearId = generateId()
+                    monthId = generateId()
+                    viewModel.setSuccessStateWithEmptyList()
+                } else {
+                    isNew = true
+                    monthId = generateId()
+                    viewModel.setSuccessStateWithEmptyList()
+                }
             }
         }
     }
@@ -119,11 +164,54 @@ class NightFragment : Fragment() {
             )
             if (data.isNotEmpty()) {
                 for (i in data) {
-                    trackers.add(data.indexOf(i), i.id, i.date, i.value)
+                    if (i.date == date) {
+                        isCurrentTrackerAdded = true
+                    }
+                    trackers.addTrackerItem(data.indexOf(i), i.date, i.value)
                 }
             }
-
+            trackers.addFabItem(trackers.size) {
+                if (!isCurrentTrackerAdded) {
+                    setupAddTrackerDialog()
+                } else {
+                    setupAlreadyHaveTrackerDialog()
+                }
+            }
+            mainAdapter.submitList(trackers)
         }
+    }
+
+    private fun setupAlreadyHaveTrackerDialog() {
+        val dialogFragment = AlreadyHaveTrackerDialogFragment()
+        activity?.supportFragmentManager?.let {
+            dialogFragment.show(
+                it,
+                "ALREADY_HAVE_TRACKER_DIALOG"
+            )
+        }
+    }
+
+    private fun setupAddTrackerDialog() {
+        val dialogFragment = AddTrackerDialogFragment(
+            NIGHT_TRACKER,
+            isNew,
+            yearId.toString(),
+            year,
+            monthId.toString(),
+            month,
+            date
+        )
+        activity?.supportFragmentManager?.let { dialogFragment.show(it, "ADD_TRACKER_DIALOG") }
+        dialogFragment.onDismissListener(object : DialogDismissedListener {
+            override fun handleDialogClose(bundle: Bundle?) {
+                trackers.removeLast()
+                mainAdapter.notifyItemRemoved(trackers.size - 1)
+                trackers.addTrackerItem(trackers.size, date, bundle?.getString(VALUE).toString())
+                trackers.addFabItem(trackers.size) { setupAlreadyHaveTrackerDialog() }
+                mainAdapter.notifyItemRangeInserted(trackers.size, 2)
+                isCurrentTrackerAdded = true
+            }
+        })
     }
 
     private fun generateId(): String {
@@ -133,12 +221,30 @@ class NightFragment : Fragment() {
     }
 }
 
-private fun MutableList<DelegateItem>.add(index: Int, id: String, date: String, value: String) {
+private fun MutableList<DelegateItem>.addFabItem(
+    index: Int,
+    function: () -> Unit
+) {
+    this.add(FabDelegateItem(FabModel(
+        index,
+        object : ButtonClickListener {
+            override fun onClick() {
+                function.invoke()
+            }
+        }
+    )))
+}
+
+private fun MutableList<DelegateItem>.addTrackerItem(
+    index: Int,
+    date: String,
+    value: String,
+) {
     this.add(TrackerDelegateItem(TrackerModel(
         index,
         date,
         value,
-        object : ButtonClickListener{
+        object : ButtonClickListener {
             override fun onClick() {
 
             }

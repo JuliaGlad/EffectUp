@@ -80,7 +80,7 @@ class TrackersFragment : Fragment() {
                     R.drawable.ic_habits,
                     object : ButtonClickListener {
                         override fun onClick() {
-                            navigate(R.id.action_trackersFragment_to_habitTrackersFragment)
+                          navigate(R.id.action_trackersFragment_to_chooseHabitFragment)
                         }
                     }
                 )

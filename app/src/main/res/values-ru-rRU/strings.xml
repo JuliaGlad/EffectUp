@@ -121,7 +121,20 @@
     <string name="mood_tracker_desc">поможет записывать свои эмоции  по окончании дня</string>
     <string name="habits_tracker_desc">Поможет вам заниматься занятиями и получать результат</string>
     <string name="sleep_trackers">Трекер сна</string>
-    <string name="track_the_quality_of_your_sleep">Отслеживайте качество своего сна</string>
+    <string name="track_the_quality_of_your_sleep">Отслеживайте качество своего сна!</string>
+    <string name="choose_the_quality_of_your_sleep_on">Выберите качество своего сна</string>
+    <string name="choose_the_quality_of_your_mood_on">Выберите качество своего настроения</string>
+    <string name="track_your_daily_mood">Ежедневно отслеживайте свое настроение!</string>
+    <string name="already_have">Уже есть!</string>
+    <string name="you_have_already_added_tracker_to_this_day_if_you_want_you_can_edit_this_tracker">У вас уже есть отметка на этом дне! Ты можешь просто подкорректировать ее при необходимости!</string>
+    <string name="mood_tracker">Трекер настроения</string>
+    <string name="habit_trackers">Трекер привычек</string>
+    <string name="add_habit">Добавить привычку</string>
+    <string name="habit">Привычка</string>
+    <string name="track_the_progress_of_your_habits_and_other_activities">Отслеживайте прогресс своих привычек и иных занятийs</string>
+    <string name="complete">Выполнено</string>
+    <string name="incomplete">Не выполнено</string>
+    <string name="you_managed_to_achieve_your_goal">Вы успели выполнить свою цель</string>
 
     <string-array name="week_days">
         <item>Пн.</item>

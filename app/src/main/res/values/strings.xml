@@ -13,6 +13,7 @@
     <string name="name">Name</string>
     <string name="don_t_have_an_account_yet">Don`t have an account, yet?</string>
     <string name="create">Create!</string>
+    <string name="track_the_progress_of_your_habits_and_other_activities">Track the progress of your habits and other activities</string>
     <string name="create_account">Create account!</string>
     <string name="confirm_your_phone_number">Confirm your phone number</string>
     <string name="we_have_sent_a_verification_code_to_this_number">We have send a verification code to this number</string>
@@ -123,11 +124,21 @@
         <item>Sat</item>
         <item>Sun</item>
     </string-array>
+
+    <string-array name="qualities">
+        <item>Great</item>
+        <item>Good</item>
+        <item>Not bad</item>
+        <item>Very bad</item>
+    </string-array>
+
     <string name="stop">Stop</string>
     <string name="pomodoro_started_desc_first">Помодоро таймер будет повторятся 4 раза: у вас будет по</string>
     <string name="pomodoro_desc_second">на работу и по</string>
     <string name="pomodoro_desc_third">на отдых</string>
     <string name="time_to_work">Time to Work!</string>
+    <string name="choose_the_quality_of_your_mood_on">Choose the quality of your mood on</string>
+    <string name="track_your_daily_mood">Track your daily mood!</string>
     <string name="time_to_rest">Time to rest!</string>
     <string name="your_pomodoro_timer_successfully_finished">Your pomodoro timer successfully finished</string>
     <string name="great_translatable">Great!</string>
@@ -149,4 +160,14 @@
     <string name="habits_tracker_desc">It will help you to engage in classes and get results</string>
     <string name="sleep_trackers">Sleep tracker</string>
     <string name="track_the_quality_of_your_sleep">Track the quality of your sleep</string>
+    <string name="choose_the_quality_of_your_sleep_on">Choose the quality of your sleep on</string>
+    <string name="already_have">Already have!</string>
+    <string name="you_have_already_added_tracker_to_this_day_if_you_want_you_can_edit_this_tracker">You have already added tracker to this day! If you want, you can edit this tracker</string>
+    <string name="mood_tracker">Mood tracker</string>
+    <string name="habit_trackers">Habit Trackers</string>
+    <string name="add_habit">Add habit</string>
+    <string name="habit">Habit</string>
+    <string name="complete">Complete</string>
+    <string name="incomplete">Incomplete</string>
+    <string name="you_managed_to_achieve_your_goal">You managed to achieve your goal</string>
 </resources>

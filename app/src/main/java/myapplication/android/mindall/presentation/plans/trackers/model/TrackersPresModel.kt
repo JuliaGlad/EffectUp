@@ -1,4 +1,4 @@
-package myapplication.android.mindall.presentation.plans.trackers.nightTrackers.model
+package myapplication.android.mindall.presentation.plans.trackers.model
 
 data class TrackersPresModel(
     val id: String,

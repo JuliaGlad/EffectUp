@@ -27,6 +27,13 @@ class ChoosePlansTypeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
+        initBackButton()
+    }
+
+    private fun initBackButton() {
+        binding.imageButton.setOnClickListener {
+            activity?.finish()
+        }
     }
 
     private fun initRecyclerView() {

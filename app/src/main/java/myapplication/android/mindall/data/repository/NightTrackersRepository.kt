@@ -1,5 +1,6 @@
 package myapplication.android.mindall.data.repository
 
+import android.util.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentReference
 import io.reactivex.rxjava3.core.Completable
@@ -14,36 +15,10 @@ import myapplication.android.mindall.common.Constants.Companion.TRACKERS_LIST
 import myapplication.android.mindall.common.Constants.Companion.USER_LIST
 import myapplication.android.mindall.common.Constants.Companion.VALUE
 import myapplication.android.mindall.common.Constants.Companion.YEAR
-import myapplication.android.mindall.common.Constants.Companion.YEAR_LIST
-import myapplication.android.mindall.data.dto.trackers.MonthDto
 import myapplication.android.mindall.data.dto.trackers.TrackerDto
-import myapplication.android.mindall.data.dto.trackers.YearDto
 import myapplication.android.mindall.di.DI.Companion.service
 
 class NightTrackersRepository {
-
-    fun getYearMonths(year: String): Single<MonthDto> {
-        return Single.create { emitter ->
-            service?.auth?.currentUser?.uid?.let { uid ->
-                service.fireStore
-                    .collection(USER_LIST)
-                    .document(uid)
-                    .collection(NIGHT_TRACKERS_LIST)
-                    .get().addOnCompleteListener { query ->
-                        if (query.isComplete) {
-                            val docs = query.result.documents
-                            lateinit var yearId: String
-                            for (i in docs) {
-                                if (i.getString(YEAR) == year) {
-                                    yearId = i.id
-                                }
-                                //TODO("Implement statistics")
-                            }
-                        }
-                    }
-            }
-        }
-    }
 
     fun getYearId(year: String): Single<String> {
         return Single.create { emitter ->
@@ -131,6 +106,7 @@ class NightTrackersRepository {
                                         )
                                     )
                                 }
+                                Log.i("Trackers data", "${trackers.size}")
                                 emitter.onSuccess(trackers)
                             }
                         }
@@ -173,14 +149,14 @@ class NightTrackersRepository {
             }
         }
 
-        fun editTracker(
-            trackerId: String,
-            value: String
-        ): Completable {
-            return Completable.create { emitter ->
-
-            }
-        }
+//        fun editTracker(
+//            trackerId: String,
+//            value: String
+//        ): Completable {
+//            return Completable.create { emitter ->
+//
+//            }
+//        }
 
         private fun createTrackerDocument(
             document: DocumentReference,

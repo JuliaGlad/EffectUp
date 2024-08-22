@@ -11,20 +11,15 @@
         android:label="fragment_trackers"
         tools:layout="@layout/fragment_trackers" >
         <action
-            android:id="@+id/action_trackersFragment_to_habitTrackersFragment"
-            app:destination="@id/habitTrackersFragment" />
-        <action
             android:id="@+id/action_trackersFragment_to_moodTrackersFragment"
             app:destination="@id/moodTrackersFragment" />
         <action
             android:id="@+id/action_trackersFragment_to_nightFragment"
             app:destination="@id/nightFragment" />
+        <action
+            android:id="@+id/action_trackersFragment_to_chooseHabitFragment"
+            app:destination="@id/chooseHabitFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/habitTrackersFragment"
-        android:name="myapplication.android.mindall.presentation.plans.trackers.habiitTrackers.HabitTrackersFragment"
-        android:label="fragment_habit_trackers"
-        tools:layout="@layout/fragment_habit_trackers" />
     <fragment
         android:id="@+id/moodTrackersFragment"
         android:name="myapplication.android.mindall.presentation.plans.trackers.moodTrackers.MoodTrackersFragment"
@@ -35,4 +30,22 @@
         android:name="myapplication.android.mindall.presentation.plans.trackers.nightTrackers.NightFragment"
         android:label="fragment_night"
         tools:layout="@layout/fragment_night" />
+    <fragment
+        android:id="@+id/chooseHabitFragment"
+        android:name="myapplication.android.mindall.presentation.plans.trackers.habiitTrackers.chooseHabit.ChooseHabitFragment"
+        android:label="fragment_choose_habit"
+        tools:layout="@layout/fragment_choose_habit" >
+        <action
+            android:id="@+id/action_chooseHabitFragment_to_habitTrackersFragment"
+            app:destination="@id/habitTrackersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitTrackersFragment"
+        android:name="myapplication.android.mindall.presentation.plans.trackers.habiitTrackers.main.HabitTrackersFragment"
+        android:label="fragment_habit_trackers"
+        tools:layout="@layout/fragment_habit_trackers" >
+        <action
+            android:id="@+id/action_habitTrackersFragment_to_chooseHabitFragment"
+            app:destination="@id/chooseHabitFragment" />
+    </fragment>
 </navigation>
