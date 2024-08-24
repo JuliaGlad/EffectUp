@@ -99,6 +99,11 @@
     <string name="question" translatable="false">\?</string>
     <string name="your_time">Your time</string>
     <string name="great" translatable="false">Great!</string>
+    <string name="planning">Planning</string>
+    <string name="is_an_important_process_for_achieving_goals_in_any_area_of_life_and_activity"> This is an important process for achieving goals in any area of life and activity. </string>
+    <string name="this_is_a_technique_for_managing_your_own_time_which_helps_you_work_more_productively_and_take_rest_breaks_at_a_strictly_allotted_time.">This is a technique for managing your own time, which helps you work more productively and take rest breaks at a strictly allotted time.</string>
+    <string name="Pomodoro">Pomodoro</string>
+    <string name="they_help_you_keep_track_of_the_process_in_any_of_your_endeavors_and_achieve_your_goals">They help you keep track of the process in any of your endeavors and achieve your goals</string>
 
     <string-array name="month">
         <item>January</item>
@@ -170,4 +175,7 @@
     <string name="complete">Complete</string>
     <string name="incomplete">Incomplete</string>
     <string name="you_managed_to_achieve_your_goal">You managed to achieve your goal</string>
+    <string name="plan_using">Plan using</string>
+    <string name="effectup">EffectUp</string>
+    <string name="go_to_your_goal_easily_and_simply">Go to your goal easily and simply</string>
 </resources>

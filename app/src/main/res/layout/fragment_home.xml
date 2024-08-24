@@ -1,22 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
     android:layout_height="match_parent"
     tools:context=".presentation.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Material3.TitleExtraLarge.Bold.EffectUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/plan_using"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_effect"
+            style="@style/TextAppearance.Material3.TitleExtraLarge.Bold.EffectUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/effectup"
+            android:textColor="#FFBE5D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/title_small"
+            style="@style/TextAppearance.Material3.BodySmall.Hint.Medium.EffectUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/go_to_your_goal_easily_and_simply"
+            app:layout_constraintStart_toStartOf="@+id/title_effect"
+            app:layout_constraintTop_toBottomOf="@+id/title_effect" />
+
+        <ImageView
+            android:id="@+id/image_tracker"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFDEAD"
+            android:src="@drawable/tracker_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_pomodoro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_pomodoro" />
+
+        <ImageView
+            android:id="@+id/image_pomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#FFDEAD"
+            android:padding="16dp"
+            android:src="@drawable/pomodoro_timer"
+            app:layout_constraintBottom_toBottomOf="@+id/background_text_pomodoro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_plans" />
+
+        <ImageView
+            android:id="@+id/image_plans"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:background="#FFDEAD"
+            android:padding="20dp"
+            android:src="@drawable/image"
+            app:layout_constraintEnd_toStartOf="@+id/image_pomodoro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_small" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/background_text_planning"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFF0D8"
+            app:layout_constraintStart_toEndOf="@id/image_plans"
+            app:layout_constraintTop_toTopOf="@id/image_plans"
+            app:layout_constraintBottom_toTopOf="@id/image_pomodoro"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/plans_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/bold_roboto"
+                android:text="@string/planning"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/plans_text"
+                style="@style/TextAppearance.Material3.BodySmall.Hint.Medium.EffectUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/is_an_important_process_for_achieving_goals_in_any_area_of_life_and_activity"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plans_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/background_text_pomodoro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FFF0D8"
+            app:layout_constraintEnd_toStartOf="@+id/image_pomodoro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_plans">
+
+            <TextView
+                android:id="@+id/pomodoro_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/bold_roboto"
+                android:text="@string/pomodoro"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pomodoro_text"
+                style="@style/TextAppearance.Material3.BodySmall.Hint.Medium.EffectUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/this_is_a_technique_for_managing_your_own_time_which_helps_you_work_more_productively_and_take_rest_breaks_at_a_strictly_allotted_time."
+                android:textAlignment="viewStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pomodoro_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/background_text_tracker"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFF0D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_tracker"
+            app:layout_constraintTop_toBottomOf="@+id/image_pomodoro" >
+
+            <TextView
+                android:id="@+id/tracker_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/bold_roboto"
+                android:text="@string/tracker"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/md_theme_primary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tracker_text"
+                style="@style/TextAppearance.Material3.BodySmall.Hint.Medium.EffectUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/they_help_you_keep_track_of_the_process_in_any_of_your_endeavors_and_achieve_your_goals"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tracker_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -117,6 +117,13 @@
         <item name="fontFamily">@font/bold_roboto</item>
     </style>
 
+    <style name="TextAppearance.Material3.TitleExtraLarge.Bold.EffectUp" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">@font/bold_roboto</item>
+        <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
     <style name="TextAppearance.Material3.TitleLarge.Medium.EffectUp" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">?colorOnSurface</item>
@@ -150,6 +157,13 @@
         <item name="android:textColor">@color/md_theme_hint_color</item>
         <item name="android:fontFamily">@font/bold_roboto</item>
         <item name="fontFamily">@font/bold_roboto</item>
+    </style>
+
+    <style name="TextAppearance.Material3.BodySmall.Hint.Medium.EffectUp" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/md_theme_hint_color</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
     <style name="TextAppearance.Material3.TitleSmall.Medium.EffectUp" parent="TextAppearance.Material3.TitleSmall">

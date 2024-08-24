@@ -203,6 +203,10 @@ class HabitTrackersRepository {
             date: String,
             isComplete: Boolean
         ): Completable {
+
+            DI.service?.fireStore?.collection(USER_LIST)?.document("UID")
+                
+
             return Completable.create { emitter ->
                 DI.service?.auth?.currentUser?.uid?.let { uid ->
                     val document = DI.service.fireStore

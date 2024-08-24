@@ -135,6 +135,14 @@
     <string name="complete">Выполнено</string>
     <string name="incomplete">Не выполнено</string>
     <string name="you_managed_to_achieve_your_goal">Вы успели выполнить свою цель</string>
+    <string name="plan_using">Планируйте с</string>
+    <string name="effectup" translatable="false">EffectUp</string>
+    <string name="go_to_your_goal_easily_and_simply">Идите к своей цели легко и просто</string>
+    <string name="planning">Планирование</string>
+    <string name="is_an_important_process_for_achieving_goals_in_any_area_of_life_and_activity"> Это важный процесс для достижения целей в любой сфере жизни и деятельности.  </string>
+    <string name="this_is_a_technique_for_managing_your_own_time_which_helps_you_work_more_productively_and_take_rest_breaks_at_a_strictly_allotted_time.">Это приём для управления собственным временем, который помогает работать более продуктивно и делать перерывы на отдых в строго отведённое на них время.</string>
+    <string name="Pomodoro">Помодоро</string>
+    <string name="they_help_you_keep_track_of_the_process_in_any_of_your_endeavors_and_achieve_your_goals">Они помогают вам отслеживать процесс в любых ваших начинаниях и достигать своих целей</string>
 
     <string-array name="week_days">
         <item>Пн.</item>
