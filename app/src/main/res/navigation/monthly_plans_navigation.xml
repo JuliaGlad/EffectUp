@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_choose_year_and_month" >
         <action
             android:id="@+id/action_chooseYearAndMonthFragment_to_monthPlanDetailsFragment"
-            app:destination="@id/monthPlanDetailsFragment" />
+            app:destination="@id/monthPlanDetailsFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
     </fragment>
     <fragment
         android:id="@+id/monthPlanDetailsFragment"
@@ -21,6 +25,10 @@
         tools:layout="@layout/fragment_month_plan_details" >
         <action
             android:id="@+id/action_monthPlanDetailsFragment_to_chooseYearAndMonthFragment"
-            app:destination="@id/chooseYearAndMonthFragment" />
+            app:destination="@id/chooseYearAndMonthFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
     </fragment>
 </navigation>

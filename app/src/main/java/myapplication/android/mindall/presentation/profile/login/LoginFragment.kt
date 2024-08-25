@@ -31,7 +31,7 @@ class LoginFragment : Fragment() {
         launcher = registerForActivityResult<Intent, ActivityResult>(
             ActivityResultContracts.StartActivityForResult()
         ) { result: ActivityResult ->
-            (result.resultCode == RESULT_OK).let {
+            if (result.resultCode == RESULT_OK) {
                 NavHostFragment.findNavController(this)
                     .navigate(R.id.action_loginFragment_to_navigation_profile)
             }
@@ -63,10 +63,12 @@ class LoginFragment : Fragment() {
 
     private fun setupObserves() {
         viewModel.isLogged.observe(viewLifecycleOwner) {
-                ((it == true) and (it != null)).let {
+            if (it != null) {
+                if (it) {
                     NavHostFragment.findNavController(this)
                         .navigate(R.id.action_loginFragment_to_navigation_profile)
                 }
+            }
         }
     }
 

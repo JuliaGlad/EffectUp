@@ -10,17 +10,6 @@
         android:name="myapplication.android.mindall.presentation.profile.createAccount.main.CreateAccountFragment"
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account" >
-        <action
-            android:id="@+id/action_createAccountFragment_to_phoneCheckingFragment"
-            app:destination="@id/phoneCheckingFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/phoneCheckingFragment"
-        android:name="myapplication.android.mindall.presentation.profile.createAccount.phoneCheck.PhoneCheckingFragment"
-        android:label="fragment_phone_checking"
-        tools:layout="@layout/fragment_phone_checking" >
-        <action
-            android:id="@+id/action_phoneCheckingFragment_to_createAccountFragment"
-            app:destination="@id/createAccountFragment" />
-    </fragment>
+
 </navigation>

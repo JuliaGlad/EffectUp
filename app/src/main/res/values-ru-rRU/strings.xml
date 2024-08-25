@@ -143,6 +143,8 @@
     <string name="this_is_a_technique_for_managing_your_own_time_which_helps_you_work_more_productively_and_take_rest_breaks_at_a_strictly_allotted_time.">Это приём для управления собственным временем, который помогает работать более продуктивно и делать перерывы на отдых в строго отведённое на них время.</string>
     <string name="Pomodoro">Помодоро</string>
     <string name="they_help_you_keep_track_of_the_process_in_any_of_your_endeavors_and_achieve_your_goals">Они помогают вам отслеживать процесс в любых ваших начинаниях и достигать своих целей</string>
+    <string name="need_an_account">Нужен аккаунт</string>
+    <string name="you_have_to_create_account_to_perform_this_action">Для этого действия вам необходимо создайть или войти в аккаунт</string>
 
     <string-array name="week_days">
         <item>Пн.</item>

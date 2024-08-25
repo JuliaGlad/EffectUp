@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.eftimoff.androidplayer.Player
 import com.eftimoff.androidplayer.actions.property.PropertyAction
 import myapplication.android.mindall.MainActivity
@@ -16,10 +17,17 @@ import myapplication.android.mindall.common.recyclerView.buttonWithIcon.ButtonWi
 import myapplication.android.mindall.common.recyclerView.buttonWithIcon.ButtonWithIconModel
 import myapplication.android.mindall.common.recyclerView.buttonWithIconAndText.ButtonWithIconAndTextAdapter
 import myapplication.android.mindall.common.recyclerView.buttonWithIconAndText.ButtonWithIconAndTextModel
+import myapplication.android.mindall.presentation.dialog.needAccount.NeedAccountDialogFragment
 
 class PlansMainFragment : Fragment() {
-
+    private val viewModel: PlansMainViewModel by viewModels()
+    private var isUserExist: Boolean = false
     private lateinit var binding: FragmentPlansMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        isUserExist = viewModel.checkUser()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,7 +52,11 @@ class PlansMainFragment : Fragment() {
                 R.drawable.ic_list,
                 object : ButtonClickListener {
                     override fun onClick() {
-                        (activity as MainActivity).openPlansActivity()
+                        if (isUserExist) {
+                            (activity as MainActivity).openPlansActivity()
+                        } else {
+                            setupNeedAccountDialog()
+                        }
                     }
                 }),
             ButtonWithIconAndTextModel(
@@ -54,7 +66,11 @@ class PlansMainFragment : Fragment() {
                 R.drawable.ic_mood,
                 object : ButtonClickListener {
                     override fun onClick() {
-                        (activity as MainActivity).openTrackersActivity()
+                        if (isUserExist) {
+                            (activity as MainActivity).openTrackersActivity()
+                        } else {
+                            setupNeedAccountDialog()
+                        }
                     }
                 }),
             ButtonWithIconAndTextModel(
@@ -71,5 +87,10 @@ class PlansMainFragment : Fragment() {
         val adapter = ButtonWithIconAndTextAdapter()
         binding.recyclerView.adapter = adapter
         adapter.submitList(items)
+    }
+
+    private fun setupNeedAccountDialog() {
+        val dialogFragment = NeedAccountDialogFragment()
+        activity?.supportFragmentManager?.let { dialogFragment.show(it, "NEED_ACCOUNT_DIALOG") }
     }
 }

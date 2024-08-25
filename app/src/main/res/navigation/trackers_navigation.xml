@@ -9,16 +9,28 @@
         android:id="@+id/trackersFragment"
         android:name="myapplication.android.mindall.presentation.plans.trackers.TrackersFragment"
         android:label="fragment_trackers"
-        tools:layout="@layout/fragment_trackers" >
+        tools:layout="@layout/fragment_trackers">
         <action
             android:id="@+id/action_trackersFragment_to_moodTrackersFragment"
-            app:destination="@id/moodTrackersFragment" />
+            app:destination="@id/moodTrackersFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
         <action
             android:id="@+id/action_trackersFragment_to_nightFragment"
-            app:destination="@id/nightFragment" />
+            app:destination="@id/nightFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
         <action
             android:id="@+id/action_trackersFragment_to_chooseHabitFragment"
-            app:destination="@id/chooseHabitFragment" />
+            app:destination="@id/chooseHabitFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
     </fragment>
     <fragment
         android:id="@+id/moodTrackersFragment"
@@ -34,18 +46,26 @@
         android:id="@+id/chooseHabitFragment"
         android:name="myapplication.android.mindall.presentation.plans.trackers.habiitTrackers.chooseHabit.ChooseHabitFragment"
         android:label="fragment_choose_habit"
-        tools:layout="@layout/fragment_choose_habit" >
+        tools:layout="@layout/fragment_choose_habit">
         <action
             android:id="@+id/action_chooseHabitFragment_to_habitTrackersFragment"
-            app:destination="@id/habitTrackersFragment" />
+            app:destination="@id/habitTrackersFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
     </fragment>
     <fragment
         android:id="@+id/habitTrackersFragment"
         android:name="myapplication.android.mindall.presentation.plans.trackers.habiitTrackers.main.HabitTrackersFragment"
         android:label="fragment_habit_trackers"
-        tools:layout="@layout/fragment_habit_trackers" >
+        tools:layout="@layout/fragment_habit_trackers">
         <action
             android:id="@+id/action_habitTrackersFragment_to_chooseHabitFragment"
-            app:destination="@id/chooseHabitFragment" />
+            app:destination="@id/chooseHabitFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
     </fragment>
 </navigation>

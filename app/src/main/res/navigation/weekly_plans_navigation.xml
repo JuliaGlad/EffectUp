@@ -9,22 +9,34 @@
         android:id="@+id/monthlyPlanCalendarFragment"
         android:name="myapplication.android.mindall.presentation.plans.basicPlans.weekly.calendar.WeeklyPlanCalendarFragment"
         android:label="fragment_monthly_plan_calendar"
-        tools:layout="@layout/fragment_monthly_plan_calendar" >
+        tools:layout="@layout/fragment_monthly_plan_calendar">
         <action
             android:id="@+id/action_monthlyPlanCalendarFragment_to_daysOfWeekFragment"
-            app:destination="@id/daysOfWeekFragment" />
+            app:destination="@id/daysOfWeekFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
     </fragment>
     <fragment
         android:id="@+id/daysOfWeekFragment"
         android:name="myapplication.android.mindall.presentation.plans.basicPlans.weekly.weeklyPlansDetails.daysOfWeek.DaysOfWeekFragment"
         android:label="fragment_days_of_week"
-        tools:layout="@layout/fragment_days_of_week" >
+        tools:layout="@layout/fragment_days_of_week">
         <action
             android:id="@+id/action_daysOfWeekFragment_to_monthlyPlanCalendarFragment"
-            app:destination="@id/monthlyPlanCalendarFragment" />
+            app:destination="@id/monthlyPlanCalendarFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
         <action
             android:id="@+id/action_daysOfWeekFragment_to_weeklyTaskDetailsFragment"
-            app:destination="@id/weeklyTaskDetailsFragment" />
+            app:destination="@id/weeklyTaskDetailsFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim"/>
     </fragment>
     <fragment
         android:id="@+id/weeklyTaskDetailsFragment"

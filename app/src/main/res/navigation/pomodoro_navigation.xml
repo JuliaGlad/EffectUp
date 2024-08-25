@@ -8,30 +8,46 @@
     <fragment
         android:id="@+id/chooseTimeFragment"
         android:name="myapplication.android.mindall.presentation.plans.pomodoro.chooseTime.ChooseTimeFragment"
-        android:label="ChooseTimeFragment" >
+        android:label="ChooseTimeFragment">
         <action
             android:id="@+id/action_chooseTimeFragment_to_pomodoroTimerFragment"
-            app:destination="@id/pomodoroTimerFragment" />
+            app:destination="@id/pomodoroTimerFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
     </fragment>
     <fragment
         android:id="@+id/pomodoroTimerFragment"
         android:name="myapplication.android.mindall.presentation.plans.pomodoro.pomodoroTimer.PomodoroTimerFragment"
         android:label="fragment_pomodoro_timer"
-        tools:layout="@layout/fragment_pomodoro_timer" >
+        tools:layout="@layout/fragment_pomodoro_timer">
         <action
             android:id="@+id/action_pomodoroTimerFragment_to_chooseTimeFragment"
-            app:destination="@id/chooseTimeFragment" />
+            app:destination="@id/chooseTimeFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
         <action
             android:id="@+id/action_pomodoroTimerFragment_to_pomodoroFinishedFragment"
-            app:destination="@id/pomodoroFinishedFragment" />
+            app:destination="@id/pomodoroFinishedFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
     </fragment>
     <fragment
         android:id="@+id/pomodoroFinishedFragment"
         android:name="myapplication.android.mindall.presentation.plans.pomodoro.pomodoroFinished.PomodoroFinishedFragment"
         android:label="fragment_pomodoro_finished"
-        tools:layout="@layout/fragment_pomodoro_finished" >
+        tools:layout="@layout/fragment_pomodoro_finished">
         <action
             android:id="@+id/action_pomodoroFinishedFragment_to_chooseTimeFragment"
-            app:destination="@id/chooseTimeFragment" />
+            app:destination="@id/chooseTimeFragment"
+            app:enterAnim="@anim/slide_in_fast_anim"
+            app:exitAnim="@anim/slide_out_fast_anim"
+            app:popEnterAnim="@anim/slide_in_fast_anim"
+            app:popExitAnim="@anim/slide_out_fast_anim" />
     </fragment>
 </navigation>

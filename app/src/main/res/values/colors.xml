@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="loading_color">#A6A096</color>
     <color name="red_flag_color">#FF0000</color>
     <color name="green_flag_color">#C0CD85</color>
     <color name="green_bright_color">#8BC34A</color>

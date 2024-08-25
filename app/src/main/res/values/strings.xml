@@ -178,4 +178,6 @@
     <string name="plan_using">Plan using</string>
     <string name="effectup">EffectUp</string>
     <string name="go_to_your_goal_easily_and_simply">Go to your goal easily and simply</string>
+    <string name="need_an_account">Need an account</string>
+    <string name="you_have_to_create_account_to_perform_this_action">You have to create account to perform this action</string>
 </resources>

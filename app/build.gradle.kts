@@ -46,6 +46,7 @@ android {
 dependencies {
     implementation("com.eftimoff:androidplayer:1.0.3@aar")
     implementation("com.nineoldandroids:library:2.4.0")
+    implementation("com.facebook.shimmer:shimmer:0.1.0@aar")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

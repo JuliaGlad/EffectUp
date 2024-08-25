@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
@@ -34,16 +35,18 @@ class ProfileFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        if (!viewModel.checkCurrentUser()) {
-            NavHostFragment.findNavController(this)
-                .navigate(R.id.action_navigation_profile_to_loginFragment)
-        }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initEditLauncher()
-        initSettingsLauncher()
+        if (!viewModel.checkCurrentUser()) {
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_navigation_profile_to_loginFragment)
+        } else {
+            initEditLauncher()
+            initSettingsLauncher()
+        }
     }
 
     override fun onCreateView(
@@ -66,12 +69,12 @@ class ProfileFragment : Fragment() {
         viewModel.state.observe(viewLifecycleOwner) {
             when (it.status) {
                 Status.SUCCESS -> {
-                    binding.loading.loadingLayout.visibility = GONE
                     binding.userNameTitle.text = it.data?.name
                     binding.emailTitle.text = it.data?.email
 
                     val adapter = ButtonWithIconAdapter()
                     initRecyclerView(adapter)
+                    binding.loading.loadingLayout.visibility = GONE
                 }
 
                 Status.ERROR -> {
@@ -79,7 +82,15 @@ class ProfileFragment : Fragment() {
                 }
 
                 Status.LOADING -> {
-                    binding.loading.loadingLayout.visibility = VISIBLE
+//                    binding.shimmerItems.startShimmerAnimation()
+//                    binding.userNameTitle.setBackgroundColor(
+//                        ResourcesCompat.getColor(
+//                            resources,
+//                            R.color.loading_color,
+//                            context?.theme
+//                        )
+//                    )
+                  binding.loading.loadingLayout.visibility = VISIBLE
                 }
             }
         }
@@ -87,7 +98,7 @@ class ProfileFragment : Fragment() {
 
     private fun initRecyclerView(adapter: ButtonWithIconAdapter) {
         val items: List<ButtonWithIconModel> = listOf(
-            ButtonWithIconModel(1, getString(string.edit_profile), drawable.ic_edit,false,
+            ButtonWithIconModel(1, getString(string.edit_profile), drawable.ic_edit, false,
                 object : ButtonClickListener {
                     override fun onClick() {
                         (activity as MainActivity).openProfileEditActivity(editLauncher)

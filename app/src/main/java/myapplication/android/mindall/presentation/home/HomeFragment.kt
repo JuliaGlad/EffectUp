@@ -37,6 +37,8 @@ class HomeFragment : Fragment() {
         initTextGradient(binding.plansTitle)
         initTextGradient(binding.pomodoroTitle)
         initTextGradient(binding.trackerTitle)
+
+
     }
 
     private fun initTextGradient(title: TextView) {

@@ -32,7 +32,7 @@ class UserRepository {
     }
 
     fun checkUser(): Boolean {
-        return service.let { it?.auth?.currentUser != null }
+        return service?.auth?.currentUser != null
     }
 
     fun createAccountWithEmailAndPassword(
